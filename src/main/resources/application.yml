@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+external-service:
+  tomorrow:
+    host: https://api.tomorrow.io/v4/weather/forecast
+    apikey: apikey # create an apikey here https://app.tomorrow.io
+    source: https://www.tomorrow.io
+  accuweather:
+    host: http://dataservice.accuweather.com
+    apikey: apikey # create an apikey here https://developer.accuweather.com
+    source: https://www.accuweather.com
+
+management:
+  endpoints.web.exposure.include:
+    - '*'
+  endpoint.health.show-details: always
+  health.circuitbreakers.enabled: true
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 10 # Configures the size of the sliding window which is used to record the outcome of calls when the CircuitBreaker is closed.
+        minimumNumberOfCalls: 5 # Configures the minimum number of calls which are required (per sliding window period) before the CircuitBreaker can calculate the error rate or slow call rate.
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s # The time that the CircuitBreaker should wait before transitioning from open to half-open.
+        failureRateThreshold: 50 # Configures the failure rate threshold in percentage.
+        eventConsumerBufferSize: 10
+  retry:
+    configs:
+      default:
+        max-attempts: 3 # The maximum number of attempts (including the initial call as the first attempt)
+        waitDuration: 500ms # A fixed wait duration between retry attempts
+        retryExceptions:
+          - java.lang.Exception
+          - java.lang.RuntimeException
+
