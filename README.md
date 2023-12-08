@@ -18,7 +18,7 @@ The application can be started:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/????
+git clone https://github.com/fariasrod/weather
 ```
 
 ### Useful links
