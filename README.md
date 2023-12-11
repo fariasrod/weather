@@ -6,6 +6,17 @@ Welcome to the Weather API Project!
 
 ### Getting Started
 The application can be started:
+- In the application.yml file, change the values of the api keys.
+```
+external-service:
+  tomorrow:
+    apikey: # create an apikey here https://app.tomorrow.io
+```
+```
+external-service:
+  accuweather:
+    apikey: # create an apikey here https://developer.accuweather.com
+```
 - Using Maven, it is very important that we first make a `mvn clean install` after that `mvn spring-boot:run`.
 
 ### Prerequisites
