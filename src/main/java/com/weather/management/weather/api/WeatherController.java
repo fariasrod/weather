@@ -1,6 +1,6 @@
 package com.weather.management.weather.api;
 
-import com.weather.management.weather.domain.WeatherForecastResponse;
+import com.weather.management.weather.api.dto.WeatherForecastResponse;
 import com.weather.management.weather.service.WeatherService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

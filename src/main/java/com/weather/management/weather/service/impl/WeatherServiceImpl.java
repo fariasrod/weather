@@ -4,6 +4,7 @@ import com.weather.integration.accuweather.dto.AccuWeatherForecastResponse;
 import com.weather.integration.accuweather.service.AccuweatherService;
 import com.weather.integration.tomorrow.dto.TomorrowWeatherForecastResponse;
 import com.weather.integration.tomorrow.service.TomorrowService;
+import com.weather.management.weather.api.dto.WeatherForecastResponse;
 import com.weather.management.weather.domain.*;
 import com.weather.management.weather.mapper.WeatherMapper;
 import com.weather.management.weather.service.WeatherService;

@@ -1,5 +1,6 @@
 package com.weather.management.weather.api;
 
+import com.weather.management.weather.api.dto.WeatherForecastResponse;
 import com.weather.management.weather.domain.*;
 import com.weather.management.weather.service.WeatherService;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,7 +1,7 @@
 package com.weather.management.weather.mapper;
 
 import com.weather.integration.tomorrow.dto.TomorrowWeatherForecastResponse;
-import com.weather.management.weather.domain.WeatherForecastResponse;
+import com.weather.management.weather.api.dto.WeatherForecastResponse;
 import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
 

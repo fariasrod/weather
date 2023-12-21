@@ -1,5 +1,7 @@
-package com.weather.management.weather.domain;
+package com.weather.management.weather.api.dto;
 
+import com.weather.management.weather.domain.Location;
+import com.weather.management.weather.domain.Timelines;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
